@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Task to update</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="content">
+    <h1>Update Task</h1>
+    <form action="/update/{{ task.id }}" method="POST">
+        <label for="content">Contents: </label>
+        <br />
+        <input type="text" id="content" name="content" value="{{ task.content }}" />
+        
+        <br />
+        <button type="submit" value="Update">Update</button>
+        <!-- <a href="/delete/{{ task.id }}">Delete</a> -->
+        
+        <a href="/">Back</a>  <!-- redirect to home page -->
+    </form>
+</div>
+{% endblock %}
